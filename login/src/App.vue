@@ -1,22 +1,32 @@
 <template>
   <div>
-  
+    <Suspense>
+      <template #default>
     <RouterView />
-   
+  </template>
+  <template #fallback>
+    loding Data
+  </template>
+  </Suspense>
   </div>
 </template>
 
 <script>
-// import NavBar from "@/components/navBar.vue";
-// import Footer from "@/components/footer.vue";
-// import Home from '@/components/home.vue'
+
 export default {
-  name: "ext-ra",
+  name: "App",
+  data() {
+    return {
+   
+    };
+  },
   components: {
-    // Home
-    // NavBar,
-    // Footer,
+    
+  },
+  methods: {
+    
   },
 };
 </script>
-<style></style>
+<style>
+</style>
