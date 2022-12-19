@@ -13,7 +13,7 @@
         </h2> -->
     <table class="table">
       <table
-        style="width: auto; height: auto; align-items: center; margin-left: 5%"
+        style="width: 10%; height: auto; align-items: center; margin-left: 20%"
       >
         <tr>
           <th>email</th>
@@ -39,11 +39,11 @@
 </template>
 <script>
 import axios from "axios";
-import loader from "@/components/loader.vue";
+
 export default {
   name: "tes-t",
    components: {
-    loader,
+    
    },
   data() {
     return {
@@ -95,14 +95,27 @@ tr:nth-child(odd) {
 h1{
   text-align: center;
 }
-.lodr{
-    width: 64px;
-    height: 64px;
-    position: relative;
-    top: 100%;
-    left: 20%;
-    transform: translateX(200%) translateY(200%);
-  
 
-}
+   .lodr:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:40%;
+    bottom: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: rgb(95, 237, 73) transparent rgb(95, 237, 73)transparent;
+    animation: loader 1.5s linear infinite;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 </style>
